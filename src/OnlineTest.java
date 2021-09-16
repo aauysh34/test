@@ -8,11 +8,14 @@ class OnlineTest extends JFrame implements ActionListener
 {
 
     JLabel l;
-    JRadioButton jb[]=new JRadioButton[5];
+    JRadioButton[] jb =new JRadioButton[5];
     JButton b1,b2;
     ButtonGroup bg;
-    int count=0,current=0,x=1,y=1,now=0;
-    int m []=new int[10];
+    int count=0;
+    int current=0;
+    int x=1;
+    int now=0;
+    int[] m =new int[10];
     OnlineTest(String s)
     {
         super(s);
@@ -122,8 +125,8 @@ class OnlineTest extends JFrame implements ActionListener
         }
         if(current==4)
         {
-            l.setText("Que5: Which institute is best for java coaching?");
-            jb[0].setText("Utek");jb[1].setText("Aptech");jb[2].setText("SSS IT");jb[3].setText("jtek");
+            l.setText("Que5: 1+2+3+4=?");
+            jb[0].setText("10");jb[1].setText("20");jb[2].setText("17");jb[3].setText("25");
         }
         if(current==5)
         {
@@ -168,7 +171,7 @@ class OnlineTest extends JFrame implements ActionListener
         if(current==3)
             return(jb[0].isSelected());
         if(current==4)
-            return(jb[2].isSelected());
+            return(jb[0].isSelected());
         if(current==5)
             return(jb[2].isSelected());
         if(current==6)
@@ -181,7 +184,7 @@ class OnlineTest extends JFrame implements ActionListener
             return(jb[2].isSelected());
         return false;
     }
-    public static void main(String s[])
+    public static void main(String[] s)
     {
         new OnlineTest("Quiz Of Java");
     }
